@@ -1,0 +1,51 @@
+create table guest(
+    Booking_id int(11),
+    First_name Varchar(50),
+    Last_name Varchar(50),
+    Address Varchar(50),
+    Phone_number Varchar(50),
+    Email_address Varchar(50),
+    PRIMARY KEY(Booking_id)
+    );
+    
+create table reservation(
+    Reservation_id int(11),
+    Room_type_id int(11),
+    Guest_id int(11),
+    Check_in Varchar(50),
+    Check_out Varchar(50),
+    Reservation_status int(11),
+    PRIMARY KEY(Reservation_id)
+    );
+create table booking(
+    Booking_id int(11),
+    Room_type_id int(11),
+    Guest_id int(11),
+    Check_in Varchar(50),
+    Check_out Varchar(50),
+    PRIMARY KEY(Booking_id)
+    );
+create table room_type(
+    Room_type_id int(11),
+    Room_type Varchar(50),
+    PRIMARY key(Room_type_id)
+ 	);
+ create table room(
+     Room_id int(11),
+     Room_number int(11),
+     Room_type_id int(11),
+     Room_price int(11),
+     Room_status int(11),
+     PRIMARY KEY(Room_id)
+    ); 
+create table payment(
+    Payment_id int(11),
+    Guest_id int(11),
+    Reservation_status int(11),
+    Add_on Varchar(50),
+    Room_price int(11),
+    Number_of_nights int(11),
+    Total int(11),
+    Payment_status int(11),
+    PRIMARY KEY(Payment_id)
+    );
