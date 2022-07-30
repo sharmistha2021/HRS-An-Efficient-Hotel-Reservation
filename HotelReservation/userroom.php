@@ -10,6 +10,7 @@ if(isset($_SESSION['logged_in'])){
  ?>
 <html>
   <body>
+
     <form action = "log_out.php" method = "get">
   <input class="btn-primary" type="submit" name="create" value="Logout">
 </form>
